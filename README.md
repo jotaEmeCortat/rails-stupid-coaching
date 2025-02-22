@@ -13,14 +13,12 @@ The goal was to create a simple Rails application with two pages:
 
 ### Coach’s Answer
 
-- If the user asks a question to the coach that ends with a question mark, the coach will answer
-  "Silly question, get dressed and go to work!".
+- If the message is **I am going to work**, the coach will answer _Great!_
 
-- If the user asks the coach a question (a string that ends with '?'), the coach will answer "Silly
-  question, get dressed and go to work!".
+- If the message has a **question mark ?** at the end, the coach will answer _Silly question, get
+  dressed and go to work!_.
 
-- If the user asks the coach a question containing the word "work", the coach will answer "Great!
-  Silly question, get dressed and go to work!".
+- **Otherwise** the coach will answer _I don't care, get dressed and go to work!_
 
 ## Setup
 
@@ -46,6 +44,15 @@ Start the Rails server:
 ```
 
 Access the application: Open your web browser and go to http://localhost:3000.
+
+## Testing
+
+To run the tests, use the following command:
+
+```sh
+  # test/system/questions_test.rb
+  rails test:system
+```
 
 ## Technologies Used
 
